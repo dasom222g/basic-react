@@ -1,15 +1,18 @@
-// import Button from "./components/Button";
-// import Greeting from "./components/Greeting";
-import Counter from "./components/Counter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Info from "./pages/Info";
 
 function App() {
-  return (
-    <div className="app">
-      {/* <Greeting />
-      <Button /> */}
+  // logic
 
-      <Counter />
-    </div>
+  // view
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,17 @@
 import React from "react";
 
-const Button = () => {
+const Button = ({ text, type, onButtonClick }) => {
+  // logic
+  const handleClick = () => {
+    onButtonClick(type); // type: increase | decrease
+  };
+
+  // view
   return (
     <div className="button-area">
-      <button type="button">클릭하세요</button>
+      <button type="button" onClick={handleClick}>
+        {text}
+      </button>
     </div>
   );
 };
